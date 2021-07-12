@@ -27,8 +27,8 @@ function checkDatabase() {
     const store = transaction.objectStore("pending")
     // pull all information from store set it to a variable
     const getAll = store.getAll();
-
-getAll.onsuccess = function() {
+    
+    getAll.onsuccess = function() {
     if (getAll.result.length > 0) {
       fetch("/api/transaction/bulk", {
         method: "POST",
