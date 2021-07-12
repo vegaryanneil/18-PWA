@@ -27,7 +27,6 @@ function checkDatabase() {
     const store = transaction.objectStore("pending")
     // pull all information from store set it to a variable
     const getAll = store.getAll();
-}
 
 getAll.onsuccess = function() {
     if (getAll.result.length > 0) {
@@ -50,5 +49,6 @@ getAll.onsuccess = function() {
       });
     }
   };
+}
 // listen for app coming back online
 window.addEventListener("online", checkDatabase);
