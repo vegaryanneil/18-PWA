@@ -21,7 +21,7 @@ app.use(express.static("public"));
 // });
 
 mongoose.connect(
-  process.env.MONGDB_URI || 'mongodb://localhost/budgets',
+  process.env.MONGODB_URI || 'mongodb://localhost/budgets',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
